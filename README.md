@@ -23,7 +23,6 @@ tasa de éxito inferior a 4.2 puntos porcentuales en todos los niveles.
 ## Estructura del repositorio
 
 ```
-├── informe.md                  # Memoria del TFG
 ├── requirements.txt
 ├── src/                        # Código común
 │   ├── envs.py                 # Entornos MetaDrive + recompensa optimizada + coste de riesgo
