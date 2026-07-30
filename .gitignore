@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Salidas de los scripts
+results/
+
+# Artefactos pesados de los experimentos (modelos, datasets, logs)
+*.zip
+*.pkl
+*.pt
+*.pth
+*.npz
+*.log
+checkpoints*/
+
+# Scratch
+_extracted/
+
+# SO / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Documentos no versionados
+informe.md
