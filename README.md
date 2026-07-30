@@ -51,9 +51,19 @@ tasa de éxito inferior a 4.2 puntos porcentuales en todos los niveles.
 
 ## Instalación
 
-Requiere Python ≥ 3.9. Se recomienda un entorno virtual:
+Se requiere **Python 3.10 o 3.11**.
+
+Se recomienda crear un entorno virtual:
 
 ```bash
+python -m venv .venv
+
+# Windows
+.venv\Scripts\activate
+
+# Linux/macOS
+source .venv/bin/activate
+
 pip install -r requirements.txt
 ```
 
@@ -101,6 +111,8 @@ python scripts/phase2/train.py --algo sac_lag --risk-gamma 0.9
 python scripts/phase2/evaluate.py --algo sac_lag --risk-gamma 0.9 --level all
 ```
 
+> **Nota:** La carpeta `results/` no está versionada. Para ejecutar los scripts de evaluación es necesario haber entrenado previamente los modelos correspondientes o disponer de los modelos generados durante el entrenamiento.
+
 ## Configuración experimental
 
 - **Observación:** `LidarStateObservation` (259 dims = 9 estado ego + 10 navegación + 240 LiDAR).
@@ -108,7 +120,6 @@ python scripts/phase2/evaluate.py --algo sac_lag --risk-gamma 0.9 --level all
 - **Mapas:** 3 bloques generados proceduralmente (algoritmo BIG), 2 carriles de 3.5 m, horizonte de 1000 pasos.
 - **Entrenamiento:** 3M de pasos, 8 entornos en paralelo, 3 semillas; 500 escenarios (Fase 0) o 1000 (Fases 1–2) con `traffic_density=0.15` y `accident_prob=0.4`.
 - **Test:** escenarios no vistos (100 en Fase 0; 300 en Fases 1–2 con niveles de congestión baja/media/alta).
-- **Redes:** MLP de 2×256 para actor y críticos; el modelo de riesgo usa un encoder LiDAR convolucional circular + encoder tabular residual con dos cabezas (clasificación + magnitud).
 
 Los hiperparámetros de cada algoritmo están centralizados en
 [`src/agents.py`](src/agents.py).
