@@ -57,9 +57,6 @@ Requiere Python ≥ 3.9. Se recomienda un entorno virtual:
 pip install -r requirements.txt
 ```
 
-> En Windows, MetaDrive puede requerir además `pip install metadrive-simulator[all]`
-> para los assets de renderizado. El entrenamiento no necesita render.
-
 ## Uso
 
 ### Fase 0 — sin tráfico
