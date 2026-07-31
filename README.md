@@ -45,8 +45,6 @@ tasa de éxito inferior a 4.2 puntos porcentuales en todos los niveles.
 │       ├── train_risk_model.py # 3. Entrenamiento del modelo de riesgo (por γ)
 │       ├── train.py            # 4. RL con el riesgo predicho como coste denso
 │       └── evaluate.py         # 5. Test (el coste reportado cuenta solo colisiones)
-├── FASE 0/, FASE 1/, FASE 2/   # Notebooks originales y resultados de los experimentos
-└── results/                    # Salidas de los scripts (modelos, logs, JSON) — no versionado
 ```
 
 ## Instalación
